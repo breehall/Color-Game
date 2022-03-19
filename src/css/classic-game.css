@@ -1,0 +1,69 @@
+body{
+    margin: 0;  
+    background-color: rgb(35,35,35);
+   
+}
+
+header{
+    background-color: rgb(70,130,180,255); 
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+    padding-top: 5px;
+}
+
+#rgb-val {
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+nav{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 25%;
+}
+
+nav button {
+    border: none;
+    background-color: white;
+    text-transform: uppercase;
+    color: rgb(70,130,180,255);
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+nav button:hover,
+nav button.active{
+    background-color: rgb(70,130,180,255);
+    color: white;
+}
+
+main {
+    background-color: rgb(35,35,35);
+    padding: 0 25%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.game-piece-easy{
+    height: 250px;
+    width: 25%;
+    border-radius: 25px;
+    margin: 20px 5px;
+}
+
+.game-piece-hard{
+    height: 200px;
+    width: 25%;
+    border-radius: 25px;
+    margin: 20px 5px;
+}
+
+.incorrect-guess{
+    visibility: hidden;
+}
