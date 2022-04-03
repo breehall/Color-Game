@@ -69,7 +69,8 @@ main{
   font-size: 16px;
 }
 
-#start-game-btn{
+#start-game-btn,
+#play-again-btn{
   height: 50px;
   width: 200px;
   background-color: var(--main-color);
@@ -133,7 +134,7 @@ main{
   font-weight: 700;
 }
 
-main > #play-area .incorrect-guess{
+main > #main-game-area .incorrect-guess{
   border: 1px solid black;
 }
 
@@ -143,4 +144,8 @@ main > #play-area .incorrect-guess{
 
 .show {
   display: block;
+}
+
+#end-game{
+  font-size: 36px;
 }

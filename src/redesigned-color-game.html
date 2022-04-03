@@ -22,15 +22,14 @@
         <h1>🎨 Color Mania</h1>
 
         <section id="game-settings">
-            <!-- <label for="difficulty">Difficulty</label> -->
-            <select name="difficulty" id="difficulty">
+            <select name="difficulty" id="difficulty" onchange="setGameDifficulty(value)">
                 <option disabled>Difficulty</option>
                 <option value="easy" selected>Easy</option>
                 <option value="hard">Hard</option>
             </select>
 
             <!-- <label for="color-mode">Color Mode</label> -->
-            <select name="color-mode" id="color-mode">
+            <select name="color-mode" id="color-mode" onchange="setGameColorFormat(value)">
                 <option disabled>Color Mode</option>
                 <option value="rgb" selected>RGB</option>
                 <option value="hex">HEX</option>
@@ -43,7 +42,7 @@
             <p>Welcome to Color Mania, the color guessing game! Match the RGB or Hex color code to the circle filled with the color. If you're up to the challenge, boost your game difficulty above. Guess at least 5 colors within one minute to win! Press "Start" below to get started! </p>
         </section>
 
-        <button onClick="startGame()" id="start-game-btn">Start</button>
+        <button onclick="startGame()" id="start-game-btn">Start</button>
 
         <section id="main-game-area">
             <div class="hide" id="color-prompt">
