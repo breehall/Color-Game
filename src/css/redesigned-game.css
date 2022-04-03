@@ -1,0 +1,146 @@
+/* Resets */
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+}
+
+h2{
+  font-weight: 400;
+}
+
+:root {
+    --main-color: rgb(70,130,180);
+    --header-font-size: 20px;
+    --font-family: 'Poppins', sans-serif;
+  }
+
+body{
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+header {
+  background-color: var(--main-color);
+  padding: 0 20%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 5px rgba(182, 182, 182, 0.75);
+  -moz-box-shadow: 0 3px 5px rgba(182, 182, 182, 0.75);
+  -webkit-box-shadow: 0 3px 5px rgba(182, 182, 182, 0.75);
+}
+
+header > h1 {
+  font-size: var(--header-font-size);
+  letter-spacing: 3px;
+}
+
+#game-settings > select {
+  background-color: rgba(255,255,255,0);
+  border: none;
+  color: white;
+  height: 100%;
+  padding: 20px;
+  font-size: var(--header-font-size);
+  font-family: var(--font-family);
+}
+
+#game-settings > select:hover,
+#game-settings > select:active{
+  background-color: white;
+  color: var(--main-color);
+}
+
+#game-settings > select > option {
+  color: black;
+}
+
+#game-settings > select > option:disabled {
+  color: grey;
+}
+
+main{
+  padding: 0 20%;
+  text-align: center;
+}
+
+#game-instructions > p{
+  font-size: 16px;
+}
+
+#start-game-btn{
+  height: 50px;
+  width: 200px;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: var(--header-font-size);
+  letter-spacing: 3px;
+  box-shadow: 0 3px 5px rgba(182, 182, 182, 0.75);
+  -moz-box-shadow: 0 3px 5px rgba(182, 182, 182, 0.75);
+  -webkit-box-shadow: 0 3px 5px rgba(182, 182, 182, 0.75);
+}
+
+
+#color-prompt {
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+#color-prompt > h2,
+#color-prompt > p {
+  font-size: var(--header-font-size);
+}
+
+.show-prompt-timer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#color-val {
+  font-weight: 700;
+  padding: 5px;
+  border-bottom: 5px solid var(--main-color);
+}
+
+#game-pieces{
+  display: flex;
+  
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game-piece{
+  height: 225px;
+  width: 225px;
+  margin: 10px 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: 700;
+}
+
+main > #play-area .incorrect-guess{
+  border: 1px solid black;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

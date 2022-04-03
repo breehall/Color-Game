@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+    
+    <!-- Google Fonts Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/redesigned-game.css">
+    <title>Color Mania</title>
+</head>
+
+<body>
+    <header>
+        <h1>🎨 Color Mania</h1>
+
+        <section id="game-settings">
+            <!-- <label for="difficulty">Difficulty</label> -->
+            <select name="difficulty" id="difficulty">
+                <option disabled>Difficulty</option>
+                <option value="easy" selected>Easy</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <!-- <label for="color-mode">Color Mode</label> -->
+            <select name="color-mode" id="color-mode">
+                <option disabled>Color Mode</option>
+                <option value="rgb" selected>RGB</option>
+                <option value="hex">HEX</option>
+            </select>
+        </section>
+    </header>
+
+    <main>
+        <section id="game-instructions">
+            <p>Welcome to Color Mania, the color guessing game! Match the RGB or Hex color code to the circle filled with the color. If you're up to the challenge, boost your game difficulty above. Guess at least 5 colors within one minute to win! Press "Start" below to get started! </p>
+        </section>
+
+        <button onClick="startGame()" id="start-game-btn">Start</button>
+
+        <section id="main-game-area">
+            <div class="hide" id="color-prompt">
+                <h2>Find<span id="color-val"></span></h2>
+                <p><strong>Score:</strong> <span id="score">0</span></p>
+                <p id="timer">01:00</p>
+            </div>
+            
+            <section class="hide" id="game-pieces">
+            </section>
+        </section>
+
+        <section id="end-game"></section>
+    </main>
+
+    <script src="./js/redesigned-game.js"></script>
+</body>
+</html>

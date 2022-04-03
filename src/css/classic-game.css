@@ -4,8 +4,22 @@ body{
    
 }
 
+#new-color-game {
+    width: 100%;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+#new-color-game a,
+#new-color-game a:visited{
+    font-weight: 600;
+    color: black;
+    color: black;
+    text-decoration: none;
+}
 header{
-    background-color: rgb(70,130,180,255); 
+    background-color: rgb(70,130,180); 
     text-align: center;
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -30,14 +44,14 @@ nav button {
     border: none;
     background-color: white;
     text-transform: uppercase;
-    color: rgb(70,130,180,255);
+    color: rgb(70,130,180);
     font-weight: 900;
     font-size: 1.3rem;
 }
 
 nav button:hover,
 nav button.active{
-    background-color: rgb(70,130,180,255);
+    background-color: rgb(70,130,180);
     color: white;
 }
 
