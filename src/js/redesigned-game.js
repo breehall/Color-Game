@@ -94,8 +94,11 @@ const guessColor = (event) => {
             revealColorCode.classList.add('hide');
         }
         score ++;
-        scoreLabel.textContent = score;
-        resetBoard();
+
+        setTimeout(() => {
+            scoreLabel.textContent = score;
+            resetBoard();
+        }, 750);
 
     } else {
         gamePieceSelected.classList.add('incorrect-guess');
@@ -114,14 +117,11 @@ const resetBoard = () => {
 }
 
 const resetGame = () => {
-    //resetBoard();
     playArea.innerHTML = '';
     gamePieces = [];
     winningColorVal = '';
-    gameInAction = false;
     score = 0;
     scoreLabel.textContent = '0';
-    // timeHandlers.stop();
     timeRemaining = 60;
     startGame();
 }
@@ -131,7 +131,6 @@ const startGame = () => {
     startGameButton.classList.add('hide');
     colorPrompt.classList.remove('hide');
     colorPrompt.classList.add('show-prompt-timer');
-    //colorPrompt.classList.add('show');
     playArea.classList.remove('hide');
     mainGameArea.classList.remove('hide');
     endGame.innerHTML = '';
@@ -140,24 +139,23 @@ const startGame = () => {
 }
 
 const setTimer = () => {
-    // gameInAction = true;
     const countDown = setInterval(() => {
 
-        if(timeRemaining <= 0){
+    if(timeRemaining <= 0){
         clearInterval(countDown);
-        gameInAction = false;
         finishGame();
-        }
+    }
 
-        if (timeRemaining == 60){
-            timer.textContent = '01:00';
-        } else if (timeRemaining > 9 ) {
+    if (timeRemaining == 60){
+        timer.textContent = '01:00';
+    } else if (timeRemaining > 9 ) {
         timer.textContent = `00:${timeRemaining}`;
-        } else {
+    } else {
         timer.textContent = `00:0${timeRemaining}`;
-        }
-        
-        timeRemaining -= 1;
+    }
+    
+    timeRemaining--;
+
     }, 1000);
 
     return {
@@ -166,10 +164,6 @@ const setTimer = () => {
         }
     }
 }
-
-
-
-
 
 const finishGame = () => {
     mainGameArea.classList.add('hide');
@@ -181,24 +175,14 @@ const finishGame = () => {
 const rgb2hex = (rgb) => `#${rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/).slice(1).map(n => parseInt(n, 10).toString(16).padStart(2, '0')).join('')}`
 
 
-// CRUD Operations
 const setGameDifficulty = (newDifficulty) => {
     gameDifficulty = newDifficulty;
     timeHandlers.stop();
     resetGame();
-    // timeRemaining = 60;
-    // countDown();
 }
 
 const setGameColorFormat = (newColorFormat) => {
     gameColorFormat = newColorFormat;
     timeHandlers.stop();
     resetGame();
-    // timeRemaining = 60;
-    // countDown();
-
 }
-
-// window.onload = () => {
-//     startGame()
-// }
