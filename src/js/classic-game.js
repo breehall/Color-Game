@@ -24,6 +24,7 @@ const setGame = (difficulty) => {
 
         for (let i = 0; i < 6; i++){
             let val = createRGBVal();
+            currentlyGuessing.textContent = val;
             gamePieces[i] = val;
             i == winningIndex ? winningRGBVal = val : null;
         }
@@ -32,6 +33,7 @@ const setGame = (difficulty) => {
 
         for (let i = 0; i < 9; i++){
             let val = createRGBVal();
+            currentlyGuessing.textContent = val;
             gamePieces[i] = val;
             i == winningIndex ? winningRGBVal = val : null;
         }
